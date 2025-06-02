@@ -5,7 +5,7 @@ from utils import markdown
 
 blueprint = flask.Blueprint("general", __name__, url_prefix="/")
 
-@blueprint.route("/")
+@blueprint.route("/api/embed")
 def index():
     args = flask.request.args
 
