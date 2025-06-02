@@ -7,7 +7,7 @@ blueprint = flask.Blueprint("general", __name__, url_prefix="/")
 
 @blueprint.route("/")
 def index():
-   flask.render_template("index.html")
+   return flask.render_template("index.html")
 
 @blueprint.route("/api/embed")
 def api_embed():
