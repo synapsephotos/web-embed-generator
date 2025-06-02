@@ -10,7 +10,7 @@ def index():
    flask.render_template("index.html")
 
 @blueprint.route("/api/embed")
-def index():
+def api_embed():
     args = flask.request.args
 
     if len(args) == 0:
