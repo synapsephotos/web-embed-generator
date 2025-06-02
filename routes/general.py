@@ -5,12 +5,16 @@ from utils import markdown
 
 blueprint = flask.Blueprint("general", __name__, url_prefix="/")
 
+@blueprint.route("/")
+def index():
+   flask.render_template("index.html")
+
 @blueprint.route("/api/embed")
 def index():
     args = flask.request.args
 
     if len(args) == 0:
-        return flask.render_template("index.html")
+        return "No arguments provided."
 
     title = args.get("title", "")
     description = args.get("description", "")
